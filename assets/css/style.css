@@ -263,7 +263,7 @@ nav {
 .hi-bubble {
   position: absolute;
   top: 14px;
-  right: -18px;
+  left: -18px;
   background: #e8dfff;
   color: #111;
   font-size: 0.75rem;
@@ -279,10 +279,10 @@ nav {
   content: '';
   position: absolute;
   bottom: -8px;
-  left: 12px;
+  right: 10px;
   border-top: 9px solid #e8dfff;
-  border-left: 7px solid transparent;
-  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-right: 7px solid transparent;
 }
 
 .social-links {
