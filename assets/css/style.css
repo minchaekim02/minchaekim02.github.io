@@ -892,61 +892,35 @@ nav {
 
 details.project-row {
   border-bottom: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  padding-left: 1rem;
+  transition: border-color var(--transition), background var(--transition);
 }
 
-details.project-row:first-child {
-  border-top: 1px solid var(--border);
-}
+details.project-row:first-child { border-top: 1px solid var(--border); }
+
+/* Category left-border colors */
+details.project-row.industry { border-left-color: #c86020; }
+details.project-row.research { border-left-color: var(--accent); }
+details.project-row.course   { border-left-color: #3a80a8; }
+details.project-row.award    { border-left-color: #9a7800; }
+
+details.project-row[open] { background: var(--bg-2); border-radius: 0 8px 8px 0; }
 
 details.project-row > summary {
   list-style: none;
-  padding: 0.85rem 0.4rem;
+  padding: 0.9rem 0.2rem;
   cursor: pointer;
-  transition: background var(--transition);
-  border-radius: 8px;
+  user-select: none;
 }
 
 details.project-row > summary::-webkit-details-marker { display: none; }
 
-details.project-row > summary:hover { background: var(--bg-2); }
-
 .proj-summary-main {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.7rem;
 }
-
-.proj-summary-sub {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.45rem;
-  padding-left: calc(0.6rem + 70px); /* indent past badge */
-}
-
-.proj-badge {
-  flex-shrink: 0;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 0.2rem 0.6rem;
-  border-radius: 7px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  width: 82px;
-  justify-content: center;
-}
-
-.proj-badge.industry { background: #fff0e8; color: #c86020; }
-.proj-badge.research { background: var(--accent-soft); color: var(--accent-hover); }
-.proj-badge.course   { background: #e8f3fb; color: #3a80a8; }
-.proj-badge.award    { background: #fffbea; color: #9a7800; }
-
-[data-theme="dark"] .proj-badge.industry { background: #2a1808; color: #f08040; }
-[data-theme="dark"] .proj-badge.research { background: var(--accent-soft); color: var(--accent); }
-[data-theme="dark"] .proj-badge.course   { background: #182030; color: #78b8d8; }
-[data-theme="dark"] .proj-badge.award    { background: #282008; color: #e0b040; }
 
 .proj-title {
   flex: 1;
@@ -965,7 +939,7 @@ details.project-row > summary:hover { background: var(--bg-2); }
 }
 
 .proj-chevron {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: var(--text-light);
   flex-shrink: 0;
   transition: transform var(--transition);
@@ -977,23 +951,28 @@ details.project-row[open] .proj-chevron { transform: rotate(180deg); }
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-sub);
-  background: var(--bg-3);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.18rem 0.6rem;
 }
 
 .proj-body {
-  padding: 0.2rem 0.4rem 1rem calc(0.65rem + 82px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.4rem 0.2rem 1.1rem 0;
 }
+
+.proj-body .proj-venue-tag { align-self: flex-start; }
 
 .proj-desc {
   font-size: 0.875rem;
   color: var(--text-sub);
   line-height: 1.72;
+  margin: 0;
 }
 
-/* ── Project Card (old, kept for reference) ── */
 .project-meta-row {
   display: flex;
   align-items: center;
