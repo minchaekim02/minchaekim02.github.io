@@ -94,9 +94,9 @@ nav {
 }
 
 .nav-snu-logo {
-  height: 26px;
+  height: 18px;
   width: auto;
-  opacity: 0.82;
+  opacity: 0.75;
   flex-shrink: 0;
   transition: opacity var(--transition);
 }
