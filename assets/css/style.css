@@ -434,8 +434,8 @@ nav {
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: 20px;
-  padding: 0.4rem 1.1rem;
-  font-size: 0.84rem;
+  padding: 0.28rem 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-sub);
   cursor: pointer;
@@ -487,8 +487,11 @@ nav {
   top: 5.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  min-width: 80px;
+  gap: 0.18rem;
+  min-width: 72px;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--border);
+  align-self: flex-start;
 }
 
 .side-nav-label {
@@ -497,24 +500,22 @@ nav {
   color: var(--text-light);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .side-nav-item {
-  font-size: 0.84rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-light);
   text-decoration: none;
-  padding: 0.22rem 0.6rem;
-  border-left: 2px solid var(--border);
-  transition: color var(--transition), border-color var(--transition);
-  line-height: 1.4;
+  padding: 0.15rem 0;
+  transition: color var(--transition);
+  line-height: 1.5;
 }
 
 .side-nav-item:hover,
 .side-nav-item.active {
   color: var(--accent);
-  border-left-color: var(--accent);
 }
 
 .pub-card {
