@@ -1047,7 +1047,7 @@ details.project-row[open] .proj-chevron { transform: rotate(180deg); }
 }
 
 /* ── Single post page ── */
-.post-page { max-width: 700px; }
+.post-page { max-width: 900px; }
 
 .post-header {
   margin-bottom: 2.5rem;
@@ -1112,13 +1112,29 @@ details.project-row[open] .proj-chevron { transform: rotate(180deg); }
 }
 
 .post-figure {
-  margin: 1.5rem 0 2rem 0;
+  float: right;
+  margin: 0.2rem 0 1.2rem 1.8rem;
+  width: 320px;
 }
 
 .post-img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   display: block;
+}
+
+.post-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 640px) {
+  .post-figure {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 
 .post-divider {
