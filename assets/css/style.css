@@ -194,8 +194,8 @@ nav {
 }
 
 .profile-photo-wrap {
-  width: 180px;
-  height: 180px;
+  width: 215px;
+  height: 215px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--accent-soft);
@@ -317,10 +317,14 @@ nav {
 .interest-chip.pink { background: var(--pink-soft); color: #d4638c; }
 .interest-chip.blue { background: var(--blue-soft); color: #5a9abb; }
 .interest-chip.mint { background: #eafaf5; color: #4a9e8a; }
+.interest-chip.coral { background: #fff3ee; color: #d4631a; }
+.interest-chip.yellow { background: #fffbea; color: #b8860a; }
 
 [data-theme="dark"] .interest-chip.pink { background: #2a1828; color: #e08ab0; }
 [data-theme="dark"] .interest-chip.blue { background: #182030; color: #80bcd8; }
 [data-theme="dark"] .interest-chip.mint { background: #182a28; color: #70bcaa; }
+[data-theme="dark"] .interest-chip.coral { background: #2a1808; color: #f09050; }
+[data-theme="dark"] .interest-chip.yellow { background: #282008; color: #e0b040; }
 
 /* ── News / Updates ── */
 .news-section { margin-top: 1rem; }
@@ -439,19 +443,19 @@ nav {
   font-weight: 800;
 }
 
+.pub-venue-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
 .pub-venue {
   font-size: 0.83rem;
   color: var(--accent);
   font-weight: 700;
   font-style: italic;
-}
-
-.pub-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-top: 0.2rem;
 }
 
 .pub-tag {
