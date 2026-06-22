@@ -96,3 +96,34 @@ function initPubFilter() {
 }
 
 document.addEventListener('DOMContentLoaded', initPubFilter);
+
+/* ── Section Side Nav Scroll Spy ── */
+function initSideNav() {
+  var navEls = document.querySelectorAll('.section-side-nav');
+  navEls.forEach(function(navEl) {
+    var items = navEl.querySelectorAll('.side-nav-item[data-target]');
+    if (!items.length) return;
+
+    var targets = Array.from(items).map(function(item) {
+      return document.getElementById(item.dataset.target);
+    }).filter(Boolean);
+
+    if (!targets.length) return;
+
+    if (items.length) items[0].classList.add('active');
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          items.forEach(function(item) { item.classList.remove('active'); });
+          var activeItem = navEl.querySelector('[data-target="' + entry.target.id + '"]');
+          if (activeItem) activeItem.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
+
+    targets.forEach(function(target) { observer.observe(target); });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initSideNav);
