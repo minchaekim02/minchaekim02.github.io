@@ -489,9 +489,12 @@ nav {
   flex-direction: column;
   gap: 0.18rem;
   min-width: 72px;
-  padding-left: 0.75rem;
-  border-left: 2px solid var(--border);
   align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+#pub-year-nav {
+  margin-top: 2.5rem;
 }
 
 .side-nav-label {
@@ -1032,7 +1035,7 @@ details.project-row > summary::-webkit-details-marker { display: none; }
   transition: transform var(--transition);
 }
 
-details.project-row[open] .proj-chevron { transform: rotate(180deg); }
+details.project-row[open] .proj-chevron { transform: rotate(90deg); }
 
 .proj-venue-tag {
   font-size: 0.75rem;
