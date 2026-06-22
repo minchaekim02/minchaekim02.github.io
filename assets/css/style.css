@@ -279,10 +279,10 @@ nav {
   content: '';
   position: absolute;
   bottom: -8px;
-  right: 10px;
+  left: 12px;
   border-top: 9px solid #e8dfff;
-  border-left: 3px solid transparent;
-  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 3px solid transparent;
 }
 
 .social-links {
