@@ -317,6 +317,19 @@ nav {
 .about-bio p { margin-bottom: 0.9rem; }
 .about-bio p:last-child { margin-bottom: 0; }
 
+.about-quote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2rem 0 0 0;
+  padding: 0.65rem 1.1rem;
+  background: var(--bg-2);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
 
 .interests-grid {
   display: flex;
