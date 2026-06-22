@@ -11,7 +11,10 @@
 <body>
 
 <nav>
-  <div class="nav-logo"><a href="index.html">Minchae Kim</a></div>
+  <div class="nav-logo">
+    <img src="assets/img/snu_logo.png" alt="SNU" class="nav-snu-logo">
+    <a href="index.html">Minchae Kim</a>
+  </div>
   <ul class="nav-links">
     <li><a href="index.html">About</a></li>
     <li><a href="publications.html">Publications</a></li>
@@ -32,7 +35,9 @@
     <p class="page-hero-sub">* indicates equal contribution</p>
   </div>
 
-  <!-- Filter Buttons -->
+  <!-- Filter Buttons
+       7 tag colors: AI Companion(lavender) · HCI(blue) · NLP/LLM(mint)
+                     Mental Health(pink) · Sports&Media(coral) · Simulation(yellow) · Data Mining(indigo) -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="ai-companion">AI Companion</button>
@@ -40,13 +45,15 @@
     <button class="filter-btn" data-filter="nlp">NLP / LLM</button>
     <button class="filter-btn" data-filter="mental-health">Mental Health</button>
     <button class="filter-btn" data-filter="sports">Sports &amp; Media</button>
+    <button class="filter-btn" data-filter="simulation">Simulation</button>
   </div>
 
   <!-- 2026 -->
   <div class="pub-year-group">
     <div class="pub-year-label">2026</div>
 
-    <div class="pub-card" data-tags="ai-companion,nlp">
+    <!-- Paper 1: InterAICion → AI Companion(lavender), NLP/LLM(mint), Simulation(yellow) -->
+    <div class="pub-card" data-tags="ai-companion,nlp,simulation">
       <div class="pub-title">
         InterAICion: Multi-turn Simulation Framework for Relational Harm in AI Companions
       </div>
@@ -54,14 +61,14 @@
         <strong>Minchae Kim*</strong>, Jung Lee*, Minjeong Shin, Kyusik Kim, Bongwon Suh
       </div>
       <div class="pub-venue-row">
-        <span class="pub-venue">EMNLP 2026</span>
-        <span class="pub-badge under-review">Under Review</span>
+        <span class="pub-venue">EMNLP 2026 (Under Review)</span>
         <span class="pub-tag">AI Companion</span>
-        <span class="pub-tag blue">NLP / LLM</span>
-        <span class="pub-tag pink">Relational Harm</span>
+        <span class="pub-tag mint">NLP / LLM</span>
+        <span class="pub-tag yellow">Simulation</span>
       </div>
     </div>
 
+    <!-- Paper 2: Football Fans → HCI(blue), Sports&Media(coral), AI Companion(lavender) -->
     <div class="pub-card" data-tags="hci,sports,ai-companion">
       <div class="pub-title">
         "What Keeps Fans on the Silent Field?": Understanding Lean-Back Football Fans via AI Sports Broadcasting in Non-Event Time
@@ -71,13 +78,13 @@
       </div>
       <div class="pub-venue-row">
         <span class="pub-venue">CHI 2026</span>
-        <span class="pub-badge">CHI 2026</span>
-        <span class="pub-tag blue">Sports &amp; Media</span>
-        <span class="pub-tag">HCI</span>
-        <span class="pub-tag pink">AI Companion</span>
+        <span class="pub-tag coral">Sports &amp; Media</span>
+        <span class="pub-tag blue">HCI</span>
+        <span class="pub-tag">AI Companion</span>
       </div>
     </div>
 
+    <!-- Paper 3: Just Listening → AI Companion(lavender), Mental Health(pink), HCI(blue) -->
     <div class="pub-card" data-tags="ai-companion,hci,mental-health">
       <div class="pub-title">
         "Just Listening Was Enough—Until it Wasn't": Relationship-Stage-Aware Cognitive Scaffolding in AI Companions
@@ -87,13 +94,13 @@
       </div>
       <div class="pub-venue-row">
         <span class="pub-venue">CHI EA 2026</span>
-        <span class="pub-badge">CHI EA 2026</span>
         <span class="pub-tag">AI Companion</span>
         <span class="pub-tag pink">Mental Health</span>
-        <span class="pub-tag">HCI</span>
+        <span class="pub-tag blue">HCI</span>
       </div>
     </div>
 
+    <!-- Paper 4: From Relief to Resilience → AI Companion(lavender), Mental Health(pink) -->
     <div class="pub-card" data-tags="ai-companion,mental-health">
       <div class="pub-title">
         From Relief to Resilience: Designing Adaptive AI Companions via Social Penetration Theory and Implicit Cognitive Reframing
@@ -103,7 +110,6 @@
       </div>
       <div class="pub-venue-row">
         <span class="pub-venue">HCIK 2026 (HCI Korea)</span>
-        <span class="pub-badge">HCIK 2026</span>
         <span class="pub-tag">AI Companion</span>
         <span class="pub-tag pink">Mental Health</span>
       </div>
@@ -115,6 +121,7 @@
   <div class="pub-year-group">
     <div class="pub-year-label">2024</div>
 
+    <!-- Paper 5: KDMS → Mental Health(pink), Data Mining(indigo) -->
     <div class="pub-card" data-tags="mental-health">
       <div class="pub-title">
         Poster: Analysis of User Characteristics by Depression Levels Based on Mobile Data
@@ -125,7 +132,7 @@
       <div class="pub-venue-row">
         <span class="pub-venue">KDMS 2024 (Korea Data Mining Society – Autumn Conference)</span>
         <span class="pub-tag pink">Mental Health</span>
-        <span class="pub-tag blue">Data Mining</span>
+        <span class="pub-tag indigo">Data Mining</span>
       </div>
     </div>
 
