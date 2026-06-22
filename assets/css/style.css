@@ -1006,6 +1006,17 @@ details.project-row > summary::-webkit-details-marker { display: none; }
   line-height: 1.4;
 }
 
+.proj-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-light);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.45rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .proj-date {
   font-size: 0.78rem;
   color: var(--text-light);
