@@ -317,12 +317,6 @@ nav {
 .about-bio p { margin-bottom: 0.9rem; }
 .about-bio p:last-child { margin-bottom: 0; }
 
-.bio-underline {
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
-}
 
 .interests-grid {
   display: flex;
