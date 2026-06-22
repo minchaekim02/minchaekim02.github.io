@@ -255,6 +255,36 @@ nav {
 
 .photo-placeholder .ph-icon { font-size: 2.4rem; opacity: 0.5; }
 
+.profile-photo-container {
+  position: relative;
+  width: fit-content;
+}
+
+.hi-bubble {
+  position: absolute;
+  top: 14px;
+  right: -18px;
+  background: #e8dfff;
+  color: #111;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.28rem 0.65rem;
+  border-radius: 14px;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hi-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 12px;
+  border-top: 9px solid #e8dfff;
+  border-left: 7px solid transparent;
+  border-right: 3px solid transparent;
+}
+
 .social-links {
   display: flex;
   gap: 0.6rem;
