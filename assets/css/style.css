@@ -870,6 +870,83 @@ nav {
   color: var(--text-sub);
 }
 
+/* compact header (no border, less gap) */
+.pub-page-header {
+  padding: 2rem 0 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.pub-header-note {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-left: 0.7rem;
+  vertical-align: middle;
+}
+
+/* ── Project Accordion ── */
+details.project-card { cursor: pointer; }
+
+details.project-card summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+details.project-card summary::-webkit-details-marker { display: none; }
+
+.project-summary { width: 100%; }
+
+.project-toggle-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--accent);
+  transition: all var(--transition);
+  background: var(--bg-2);
+}
+
+.project-toggle-icon::after { content: '+'; }
+
+details[open] .project-toggle-icon::after { content: '−'; }
+details[open] .project-toggle-icon {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.project-body {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* ── Posts empty state ── */
+.posts-empty {
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 /* ── Footer ── */
 footer {
   border-top: 1.5px solid var(--border);
