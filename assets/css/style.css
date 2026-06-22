@@ -899,11 +899,7 @@ details.project-row {
 
 details.project-row:first-child { border-top: 1px solid var(--border); }
 
-/* Category left-border colors */
-details.project-row.industry { border-left-color: #c86020; }
-details.project-row.research { border-left-color: var(--accent); }
-details.project-row.course   { border-left-color: #3a80a8; }
-details.project-row.award    { border-left-color: #9a7800; }
+details.project-row { border-left-color: var(--accent); }
 
 details.project-row[open] { background: var(--bg-2); border-radius: 0 8px 8px 0; }
 
@@ -971,6 +967,20 @@ details.project-row[open] .proj-chevron { transform: rotate(180deg); }
   color: var(--text-sub);
   line-height: 1.72;
   margin: 0;
+}
+
+.proj-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.proj-list li {
+  font-size: 0.875rem;
+  color: var(--text-sub);
+  line-height: 1.65;
 }
 
 .project-meta-row {
