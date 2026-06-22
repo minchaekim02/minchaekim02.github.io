@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · Minchae Kim</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="index.html">Minchae Kim</a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="cv.html">CV</a></li>
+  </ul>
+  <div class="nav-right">
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <span class="icon">🌙</span><span>Dark</span>
+    </button>
+    <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main class="page-wrapper wide">
+  <div class="page-hero">
+    <h1 class="page-hero-title">Projects</h1>
+    <p class="page-hero-sub">Research projects and technical work</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- Project 1: InterAICion -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">InterAICion: Relational Harm Simulation in AI Companions</h3>
+        <span class="project-status ongoing">Ongoing</span>
+      </div>
+      <p class="project-desc">
+        Designed and implemented a multi-turn simulation framework to systematically identify and
+        evaluate relational harm patterns in AI companion systems. The framework models
+        relationship progression dynamics between users and AI companions to surface harmful
+        interaction trajectories that emerge over extended conversations.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">LLM</span>
+        <span class="tech-tag">Simulation</span>
+        <span class="tech-tag">AI Safety</span>
+        <span class="tech-tag">HCI</span>
+      </div>
+      <div class="project-venue">→ EMNLP 2026 (Under Review)</div>
+    </div>
+
+    <!-- Project 2: Cognitive Scaffolding -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">Relationship-Stage-Aware Cognitive Scaffolding in AI Companions</h3>
+        <span class="project-status">Completed</span>
+      </div>
+      <p class="project-desc">
+        Investigated how AI companions can adapt their conversational strategies based on the
+        relationship stage with the user. Proposed a cognitive scaffolding model that shifts
+        from passive listening to active support as relational closeness deepens, grounded in
+        attachment and intimacy theory.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">AI Companion</span>
+        <span class="tech-tag">Cognitive Design</span>
+        <span class="tech-tag">User Study</span>
+      </div>
+      <div class="project-venue">→ CHI EA 2026</div>
+    </div>
+
+    <!-- Project 3: Adaptive Companion -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">Adaptive AI Companion via Social Penetration Theory</h3>
+        <span class="project-status">Completed</span>
+      </div>
+      <p class="project-desc">
+        Designed an adaptive AI companion framework leveraging Social Penetration Theory and
+        implicit cognitive reframing techniques. The system dynamically adjusts its emotional
+        support style to help users transition from short-term relief to long-term psychological
+        resilience.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">AI Companion</span>
+        <span class="tech-tag">Psychology</span>
+        <span class="tech-tag">Conversational AI</span>
+      </div>
+      <div class="project-venue">→ HCIK 2026</div>
+    </div>
+
+    <!-- Project 4: AI Sports Broadcasting -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">AI Sports Broadcasting for Lean-Back Football Fans</h3>
+        <span class="project-status">Completed</span>
+      </div>
+      <p class="project-desc">
+        Explored how AI-powered sports broadcasting can engage lean-back fans during non-event
+        time — the periods between matches or during slow game phases. Conducted user studies
+        to understand passive consumption patterns and identify opportunities for AI-mediated
+        engagement.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">AI Broadcasting</span>
+        <span class="tech-tag">User Study</span>
+        <span class="tech-tag">Media Experience</span>
+        <span class="tech-tag">HCI</span>
+      </div>
+      <div class="project-venue">→ CHI 2026</div>
+    </div>
+
+    <!-- Project 5: RAG System -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">LLM-based RAG QA System for Insurance Documents</h3>
+        <span class="project-status">Completed</span>
+      </div>
+      <p class="project-desc">
+        Developed a production-ready LLM-based Retrieval-Augmented Generation (RAG)
+        question-answering assistant for insurance policy documents at Hanwha General Insurance.
+        Built using LangChain, HuggingFace, and enterprise LLM frameworks, enabling natural
+        language queries over complex policy texts.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">LLM</span>
+        <span class="tech-tag">RAG</span>
+        <span class="tech-tag">LangChain</span>
+        <span class="tech-tag">HuggingFace</span>
+        <span class="tech-tag">Python</span>
+      </div>
+      <div class="project-venue">→ Hanwha General Insurance (Industry)</div>
+    </div>
+
+    <!-- Project 6: Depression Analysis -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">User Characteristics Analysis by Depression Levels via Mobile Data</h3>
+        <span class="project-status">Completed</span>
+      </div>
+      <p class="project-desc">
+        Analyzed mobile application log data from a digital healthcare platform using
+        Azure Databricks to identify behavioral patterns across different depression severity
+        levels. Findings informed targeted service design recommendations for mental health
+        mobile applications.
+      </p>
+      <div class="project-tech">
+        <span class="tech-tag">Azure Databricks</span>
+        <span class="tech-tag">Data Analysis</span>
+        <span class="tech-tag">Mental Health</span>
+        <span class="tech-tag">Mobile</span>
+      </div>
+      <div class="project-venue">→ KDMS 2024 (Poster)</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 Minchae Kim · Seoul National University ·
+  <a href="mailto:minchae@snu.ac.kr">minchae@snu.ac.kr</a>
+</footer>
+
+</body>
+</html>
