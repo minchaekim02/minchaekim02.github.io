@@ -1041,6 +1041,11 @@ details.project-row > summary::-webkit-details-marker { display: none; }
   line-height: 1.4;
 }
 
+.proj-org-tag {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .proj-cat {
   font-size: 0.7rem;
   font-weight: 700;
