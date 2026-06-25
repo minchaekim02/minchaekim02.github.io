@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minchae Kim</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=10" />
+  <link rel="stylesheet" href="assets/css/style.css?v=11" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -146,26 +146,35 @@
 <script>
 (function () {
   const el = document.getElementById('floating-robot');
-  let x = Math.random() * (window.innerWidth - 90);
-  let y = Math.random() * (window.innerHeight - 90);
-  let vx = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
-  let vy = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
   let dragging = false, dragOffX = 0, dragOffY = 0;
   let flipped = false;
 
-  function getSize() {
-    return el.getBoundingClientRect().width || 64;
+  function getBounds() {
+    const nav    = document.querySelector('nav');
+    const footer = document.querySelector('footer');
+    const sz     = el.getBoundingClientRect().width || 64;
+    const top    = nav    ? nav.getBoundingClientRect().bottom    : 60;
+    const bottom = footer ? footer.getBoundingClientRect().top    : window.innerHeight;
+    return { left: 0, right: window.innerWidth - sz, top, bottom: bottom - sz };
   }
+
+  const b   = getBounds();
+  let x     = b.left + Math.random() * (b.right - b.left);
+  let y     = b.top  + Math.random() * (b.bottom - b.top);
+  let speed = 1.4;
+  let angle = (Math.random() * 20 + 5) * (Math.PI / 180) * (Math.random() < 0.5 ? 1 : -1);
+  let vx    = Math.cos(angle) * speed * (Math.random() < 0.5 ? 1 : -1);
+  let vy    = Math.sin(angle) * speed;
 
   function update() {
     if (!dragging) {
-      const sz = getSize();
+      const b = getBounds();
       x += vx;
       y += vy;
-      if (x <= 0)               { x = 0;                        vx = Math.abs(vx);  flip(); }
-      if (x >= window.innerWidth - sz)  { x = window.innerWidth - sz;  vx = -Math.abs(vx); flip(); }
-      if (y <= 0)               { y = 0;                        vy = Math.abs(vy); }
-      if (y >= window.innerHeight - sz) { y = window.innerHeight - sz; vy = -Math.abs(vy); }
+      if (x <= b.left)  { x = b.left;  vx =  Math.abs(vx); flip(); }
+      if (x >= b.right) { x = b.right; vx = -Math.abs(vx); flip(); }
+      if (y <= b.top)    { y = b.top;    vy =  Math.abs(vy); }
+      if (y >= b.bottom) { y = b.bottom; vy = -Math.abs(vy); }
     }
     el.style.left = x + 'px';
     el.style.top  = y + 'px';
@@ -189,11 +198,11 @@
     y = e.clientY - dragOffY;
   });
   document.addEventListener('mouseup', () => {
-    if (dragging) {
-      dragging = false;
-      vx = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
-      vy = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
-    }
+    if (!dragging) return;
+    dragging = false;
+    const newAngle = (Math.random() * 20 + 5) * (Math.PI / 180) * (Math.random() < 0.5 ? 1 : -1);
+    vx = Math.cos(newAngle) * speed * (Math.random() < 0.5 ? 1 : -1);
+    vy = Math.sin(newAngle) * speed;
   });
 
   el.style.left = x + 'px';

@@ -146,7 +146,7 @@ nav {
 
 #theme-toggle {
   background: var(--card);
-  border: 1.5px solid var(--border);
+  border: none;
   border-radius: 50px;
   cursor: pointer;
   padding: 0.38rem 0.8rem;
@@ -295,7 +295,7 @@ nav {
   height: 40px;
   border-radius: 10px;
   background: var(--card);
-  border: 1.5px solid var(--border);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,17 +348,16 @@ nav {
 .about-bio p:last-child { margin-bottom: 0; }
 
 .about-quote {
-  border-left: 3px solid var(--accent);
   margin: 1.2rem 0 0 0;
-  padding: 0.65rem 1.1rem;
-  background: var(--bg-2);
-  border-radius: 0 8px 8px 0;
+  padding: 0.65rem 0;
   font-style: italic;
   font-size: 0.95rem;
   color: var(--text);
   font-weight: 600;
   line-height: 1.7;
 }
+.about-quote::before { content: '\201C'; color: var(--accent); font-size: 1.3em; font-style: normal; margin-right: 0.1em; }
+.about-quote::after  { content: '\201D'; color: var(--accent); font-size: 1.3em; font-style: normal; margin-left: 0.1em; }
 
 
 .interests-grid {
