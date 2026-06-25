@@ -369,7 +369,7 @@ nav {
 }
 
 .about-left .interests-grid {
-  margin-top: 0.3rem;
+  margin-top: 0;
 }
 
 .interests-label {
@@ -380,6 +380,7 @@ nav {
   text-transform: uppercase;
   text-align: center;
   margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .about-left .interest-chip {
