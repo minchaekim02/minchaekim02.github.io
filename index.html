@@ -125,5 +125,82 @@
   <a href="mailto:minchae@snu.ac.kr">minchae@snu.ac.kr</a>
 </footer>
 
+
+<img id="floating-robot" src="assets/img/robot.png" alt="robot" />
+
+<style>
+#floating-robot {
+  position: fixed;
+  width: clamp(48px, 6vw, 80px);
+  height: auto;
+  image-rendering: pixelated;
+  cursor: grab;
+  z-index: 999;
+  pointer-events: auto;
+  user-select: none;
+  transition: transform 0.1s;
+}
+#floating-robot:active { cursor: grabbing; }
+</style>
+
+<script>
+(function () {
+  const el = document.getElementById('floating-robot');
+  let x = Math.random() * (window.innerWidth - 90);
+  let y = Math.random() * (window.innerHeight - 90);
+  let vx = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
+  let vy = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
+  let dragging = false, dragOffX = 0, dragOffY = 0;
+  let flipped = false;
+
+  function getSize() {
+    return el.getBoundingClientRect().width || 64;
+  }
+
+  function update() {
+    if (!dragging) {
+      const sz = getSize();
+      x += vx;
+      y += vy;
+      if (x <= 0)               { x = 0;                        vx = Math.abs(vx);  flip(); }
+      if (x >= window.innerWidth - sz)  { x = window.innerWidth - sz;  vx = -Math.abs(vx); flip(); }
+      if (y <= 0)               { y = 0;                        vy = Math.abs(vy); }
+      if (y >= window.innerHeight - sz) { y = window.innerHeight - sz; vy = -Math.abs(vy); }
+    }
+    el.style.left = x + 'px';
+    el.style.top  = y + 'px';
+    requestAnimationFrame(update);
+  }
+
+  function flip() {
+    flipped = !flipped;
+    el.style.transform = flipped ? 'scaleX(-1)' : 'scaleX(1)';
+  }
+
+  el.addEventListener('mousedown', e => {
+    dragging = true;
+    dragOffX = e.clientX - x;
+    dragOffY = e.clientY - y;
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    x = e.clientX - dragOffX;
+    y = e.clientY - dragOffY;
+  });
+  document.addEventListener('mouseup', () => {
+    if (dragging) {
+      dragging = false;
+      vx = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
+      vy = (Math.random() * 1.5 + 1) * (Math.random() < 0.5 ? 1 : -1);
+    }
+  });
+
+  el.style.left = x + 'px';
+  el.style.top  = y + 'px';
+  requestAnimationFrame(update);
+})();
+</script>
+
 </body>
 </html>
