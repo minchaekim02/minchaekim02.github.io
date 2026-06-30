@@ -159,8 +159,8 @@
   }
 
   const b   = getBounds();
-  let x     = b.left + Math.random() * (b.right - b.left);
-  let y     = b.top  + Math.random() * (b.bottom - b.top);
+  let x     = b.left + 16;
+  let y     = b.top  + 16;
   let speed = 1.4;
   let angle = (Math.random() * 20 + 5) * (Math.PI / 180) * (Math.random() < 0.5 ? 1 : -1);
   let vx    = Math.cos(angle) * speed * (Math.random() < 0.5 ? 1 : -1);
